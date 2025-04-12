@@ -421,7 +421,7 @@ def write_final_clusters_csv(final_clusters, part_number):
     for cluster in final_clusters:
         nested_list.append(str(cluster.data_points.tolist()))
     df = pd.DataFrame({'Final Cluster Coordinates': nested_list})
-    csv_filename = f"split_merge_summary_part{part_number}.csv"
+    csv_filename = f"split_merge_summary_gurobi{part_number}.csv"
     df.to_csv(csv_filename, index=False)
     return csv_filename
 

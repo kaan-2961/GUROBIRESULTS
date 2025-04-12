@@ -8,7 +8,7 @@ import random
 # Parameters (adjust as needed)
 #####################################
 input_csv = 'set_covering_osm_data.csv'  # Input file name
-t_overall = 9         # Overall allowed time in hours
+t_overall = 6         # Overall allowed time in hours
 t_max_cluster = 3.0      # Maximum allowed time per cluster (in hours)
 speed_km_per_hr = 35.0   # Vehicle speed in km/h
 service_time_hr = 0.05   # Service time per node in hours

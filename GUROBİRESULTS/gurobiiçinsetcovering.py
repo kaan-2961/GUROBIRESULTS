@@ -439,7 +439,7 @@ def main_multi(input_csv_files, k_range):
         summary = process_input_file(csv_file, part_number=idx, k_range=k_range)
         summaries.append(summary)
     
-    excel_filename = "set_covering_summary.xlsx"
+    excel_filename = "set_covering_gurobi_summary.xlsx"
     with pd.ExcelWriter(excel_filename, engine='xlsxwriter') as writer:
         for summary in summaries:
             sheet_name = f"PART {summary['part_number']}"
@@ -468,7 +468,7 @@ def main_multi(input_csv_files, k_range):
 # -----------------------------
 if __name__ == "__main__":
     input_csv_files = [
-    "gurobi_overalltime(25.0).csv"
+    "gurobi_overalltime(6).csv"
 ]
     # Adjust the k_range as needed (for k-means clustering)
     main_multi(input_csv_files, k_range=(17, 35))
